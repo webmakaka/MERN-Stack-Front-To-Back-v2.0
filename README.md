@@ -1,2 +1,11 @@
-# MERN-Stack-Front-To-Back-v2
-[Brad Traversy] MERN Stack Front To Back: Full Stack React, Redux &amp; Node.js [2019, ENG]
+# [Brad Traversy] MERN Stack Front To Back: Full Stack React, Redux &amp; Node.js [2019, ENG]
+
+**Original src:**  
+https://github.com/bradtraversy/devconnector_2.0
+
+
+---
+
+**Marley**
+
+<a href="https://jsdev.org">jsdev.org</a>
