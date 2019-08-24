@@ -1,0 +1,3 @@
+{
+  "mongoURI": "mongodb+srv://user1:password11@mern-stack-front-to-back-0byar.mongodb.net/test?retryWrites=true&w=majority"
+}
