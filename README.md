@@ -33,7 +33,7 @@ https://github.com/bradtraversy/devconnector_2.0
 
 <br/>
 
-    $ curl localhost:5000/api/users -X POST -H "Content-Type: application/json" -d '{"name":"marley", "email":"marley@pochta.ru", "password": "password1"}'
+    $ curl -X POST -H "Content-Type: application/json" -d '{"name":"marley", "email":"marley@pochta.ru", "password": "password1"}' localhost:5000/api/users
 
 <br/>
 
@@ -41,7 +41,7 @@ https://github.com/bradtraversy/devconnector_2.0
 
     $ npm install --save gravatar bcryptjs
 
-    $ curl localhost:5000/api/users -X POST -H "Content-Type: application/json" -d '{"name":"marley", "email":"marley@pochta.ru", "password": "password1"}'
+    $ curl -X POST -H "Content-Type: application/json" -d '{"name":"marley", "email":"marley@pochta.ru", "password": "password1"}' localhost:5000/api/users
 
 <br/>
 
@@ -51,14 +51,19 @@ https://github.com/bradtraversy/devconnector_2.0
 
 delete from mongodb.com users collection
 
-    $ curl localhost:5000/api/users -X POST -H "Content-Type: application/json" -d '{"name":"marley", "email":"marley@pochta.ru", "password": "password1"}'
+    $ curl -X POST -H "Content-Type: application/json" -d '{"name":"marley", "email":"marley@pochta.ru", "password": "password1"}' localhost:5000/api/users
 
 <br/>
 
 ### 013 Custom Auth Middleware JWT Verify
 
+    $ curl -H "X-Auth-Token: <Token ID>" localhost:5000/api/auth | python -m json.tool
 
-    $ curl -H "X-Auth-Token: <Token ID>" http://localhost:5000/api/auth
+<br/>
+
+### 014 User Authentication Login Route
+
+    $ curl -X POST -H "Content-Type: application/json" -d '{ "email":"marley@pochta.ru", "password": "password1"}' localhost:5000/api/auth
 
 
 ---
