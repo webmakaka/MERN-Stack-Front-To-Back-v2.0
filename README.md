@@ -53,8 +53,12 @@ delete from mongodb.com users collection
 
     $ curl localhost:5000/api/users -X POST -H "Content-Type: application/json" -d '{"name":"marley", "email":"marley@pochta.ru", "password": "password1"}'
 
+<br/>
+
+### 013 Custom Auth Middleware JWT Verify
 
 
+    $ curl -H "X-Auth-Token: <Token ID>" http://localhost:5000/api/auth
 
 
 ---
