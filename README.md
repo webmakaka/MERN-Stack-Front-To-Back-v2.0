@@ -43,6 +43,16 @@ https://github.com/bradtraversy/devconnector_2.0
 
     $ curl localhost:5000/api/users -X POST -H "Content-Type: application/json" -d '{"name":"marley", "email":"marley@pochta.ru", "password": "password1"}'
 
+<br/>
+
+### 012 Implementing JWT
+
+    $ npm install --save jsonwebtoken
+
+delete from mongodb.com users collection
+
+    $ curl localhost:5000/api/users -X POST -H "Content-Type: application/json" -d '{"name":"marley", "email":"marley@pochta.ru", "password": "password1"}'
+
 
 
 
