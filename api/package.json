@@ -13,7 +13,8 @@
   "dependencies": {
     "config": "^3.2.2",
     "express": "^4.17.1",
-    "mongoose": "^5.6.10"
+    "express-validator": "^6.1.1",
+    "mongoose": "^5.6.11"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
