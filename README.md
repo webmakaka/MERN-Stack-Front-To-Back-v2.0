@@ -35,6 +35,16 @@ https://github.com/bradtraversy/devconnector_2.0
 
     $ curl localhost:5000/api/users -X POST -H "Content-Type: application/json" -d '{"name":"marley", "email":"marley@pochta.ru", "password": "password1"}'
 
+<br/>
+
+### 011 User Registration
+
+    $ npm install --save gravatar bcryptjs
+
+    $ curl localhost:5000/api/users -X POST -H "Content-Type: application/json" -d '{"name":"marley", "email":"marley@pochta.ru", "password": "password1"}'
+
+
+
 
 
 ---
