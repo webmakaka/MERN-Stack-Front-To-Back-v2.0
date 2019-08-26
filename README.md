@@ -66,6 +66,24 @@ delete from mongodb.com users collection
     $ curl -X POST -H "Content-Type: application/json" -d '{ "email":"marley@pochta.ru", "password": "password1"}' localhost:5000/api/auth
 
 
+<br/>
+
+## 04 Profile API Routes
+
+<br/>
+
+### 015 Creating The Profile Model
+
+<br/>
+
+### 016 Get Current User Profile
+
+    $ curl -H "X-Auth-Token: <Token ID>" localhost:5000/api/profile/me | python -m json.tool
+
+
+
+
+
 ---
 
 **Marley**
