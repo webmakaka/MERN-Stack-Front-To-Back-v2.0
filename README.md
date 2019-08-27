@@ -80,9 +80,33 @@ delete from mongodb.com users collection
 
     $ curl -H "X-Auth-Token: <Token ID>" localhost:5000/api/profile/me | python -m json.tool
 
+<br/>
+
+### 017 Create Update Profile Routes
+
+    $ curl -d '{ 
+        "company":"Marley",
+        "status": "Developer",
+        "website": "https://marley.org",
+        "skills": "HTML, CSS, JS",
+        "location": "Moscow, RU",
+        "bio": "I am developer",
+        "githubusername":"marley-nodejs",
+        "twitter":"https://twitter.com",
+        "facebook":"https://facebook.com",
+        "youtube":"https://youtube"
+    }' \
+    -H "Content-Type: application/json" \
+    -H "X-Auth-Token: <Token ID>" \
+    -X POST localhost:5000/api/profile \
+    | python -m json.tool
 
 
 
+
+
+
+    
 
 ---
 
