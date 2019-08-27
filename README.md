@@ -230,9 +230,15 @@ delete from mongodb.com users collection, then create new
     -X DELETE localhost:5000/api/profile/education/<Education ID> \
     | python -m json.tool
 
+<br/>
 
+### 023 Get Github Repos For Profile
 
+    $ npm install --save request
 
+    $ curl \
+    -X GET localhost:5000/api/profile/github/marley-nodejs \
+    | python -m json.tool
 
 ---
 
