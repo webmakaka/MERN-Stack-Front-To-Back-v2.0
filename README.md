@@ -119,7 +119,14 @@ delete from mongodb.com users collection
     | python -m json.tool
 
 
+<br/>
 
+### 019 Delete Profile User
+
+    $ curl \
+    -H "X-Auth-Token: <Token ID>" \
+    -X DELETE localhost:5000/api/profile \
+    | python -m json.tool
 
 ---
 
