@@ -41,7 +41,12 @@ https://github.com/bradtraversy/devconnector_2.0
 
     $ npm install --save gravatar bcryptjs
 
-    $ curl -X POST -H "Content-Type: application/json" -d '{"name":"marley", "email":"marley@pochta.ru", "password": "password1"}' localhost:5000/api/users
+<br/>
+
+    $ curl -d '{"name":"marley", "email":"marley@pochta.ru", "password": "password1"}' \
+    -H "Content-Type: application/json" \
+    -X POST localhost:5000/api/users \
+    | python -m json.tool
 
 <br/>
 
@@ -127,6 +132,26 @@ delete from mongodb.com users collection
     -H "X-Auth-Token: <Token ID>" \
     -X DELETE localhost:5000/api/profile \
     | python -m json.tool
+
+<br/>
+
+### 020 Add Profile Experience
+
+    $ curl -d '{ 
+        "title":"Instructor & Senior Developer",
+        "company": "Traversy Media",
+        "location": "Moscow",
+        "from": "8-10-2010",
+        "current": true,
+        "description": "Create projects and courses on web development"
+    }' \
+    -H "Content-Type: application/json" \
+    -H "X-Auth-Token: <Token ID>" \
+    -X PUT localhost:5000/api/profile/experience \
+    | python -m json.tool
+
+
+
 
 ---
 
