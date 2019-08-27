@@ -102,11 +102,24 @@ delete from mongodb.com users collection
     | python -m json.tool
 
 
+<br/>
+
+### 018 Get All Profiles Profile By User ID
+
+    $ curl \
+    -H "X-Auth-Token: <Token ID>" \
+    -X GET localhost:5000/api/profile \
+    | python -m json.tool
+
+<br/>
+
+    $ curl \
+    -H "X-Auth-Token: <Token ID>" \
+    -X GET localhost:5000/api/profile/user/<User ID> \
+    | python -m json.tool
 
 
 
-
-    
 
 ---
 
