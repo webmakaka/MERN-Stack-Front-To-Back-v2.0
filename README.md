@@ -190,6 +190,49 @@ delete from mongodb.com users collection, then create new
     | python -m json.tool
 
 
+<br/>
+
+### 022 Add Delete Profile Education
+
+    $ curl -d '{ 
+        "school":"Nothern Esses College",
+        "degree": "Associates Degree",
+        "fieldofstudy": "Computer Science",
+        "from": "8-08-2003",
+        "from": "3-4-2005",
+        "description": "Got Associates in computer science"
+    }' \
+    -H "Content-Type: application/json" \
+    -H "X-Auth-Token: <Token ID>" \
+    -X PUT localhost:5000/api/profile/education \
+    | python -m json.tool
+
+<br/>
+
+    $ curl -d '{ 
+        "school":"Test School",
+        "degree": "Associates Degree",
+        "fieldofstudy": "Computer Science",
+        "from": "8-08-2003",
+        "from": "3-4-2005",
+        "description": "Got Associates in computer science"
+    }' \
+    -H "Content-Type: application/json" \
+    -H "X-Auth-Token: <Token ID>" \
+    -X PUT localhost:5000/api/profile/education \
+    | python -m json.tool
+
+
+<br/>
+
+    $ curl \
+    -H "X-Auth-Token: <Token ID>" \
+    -X DELETE localhost:5000/api/profile/education/<Education ID> \
+    | python -m json.tool
+
+
+
+
 
 ---
 
