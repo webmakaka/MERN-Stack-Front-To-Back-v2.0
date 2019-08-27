@@ -54,9 +54,16 @@ https://github.com/bradtraversy/devconnector_2.0
 
     $ npm install --save jsonwebtoken
 
-delete from mongodb.com users collection
+delete from mongodb.com users collection, then create new
 
-    $ curl -X POST -H "Content-Type: application/json" -d '{"name":"marley", "email":"marley@pochta.ru", "password": "password1"}' localhost:5000/api/users
+    $ curl -d '{
+        "name":"marley", 
+        "email":"marley@pochta.ru", 
+        "password": "password1"
+    }' \
+    -H "Content-Type: application/json" \
+    -X POST localhost:5000/api/users \
+    | python -m json.tool
 
 <br/>
 
@@ -68,7 +75,13 @@ delete from mongodb.com users collection
 
 ### 014 User Authentication Login Route
 
-    $ curl -X POST -H "Content-Type: application/json" -d '{ "email":"marley@pochta.ru", "password": "password1"}' localhost:5000/api/auth
+    $ curl -d '{ 
+        "email":"marley@pochta.ru", 
+        "password": "password1"
+    }' \
+    -H "Content-Type: application/json" \
+    -X POST localhost:5000/api/auth \
+    | python -m json.tool
 
 
 <br/>
@@ -150,6 +163,31 @@ delete from mongodb.com users collection
     -X PUT localhost:5000/api/profile/experience \
     | python -m json.tool
 
+
+<br/>
+
+### 021 Delete Profile Experience
+
+    $ curl -d '{ 
+        "title":"Web Developer ",
+        "company": "Tech Guy Web Solutions",
+        "location": "Sankt Petersburg",
+        "from": "1-5-2006",
+        "to": "1-7-2009",
+        "description": "Fuul stack web dev"
+    }' \
+    -H "Content-Type: application/json" \
+    -H "X-Auth-Token: -H "X-Auth-Token: <Token ID>" \
+    -X PUT localhost:5000/api/profile/experience \
+    | python -m json.tool
+
+
+<br/>
+
+    $ curl \
+    -H "X-Auth-Token: <Token ID>" \
+    -X DELETE localhost:5000/api/profile/experience/<Profile ID> \
+    | python -m json.tool
 
 
 
