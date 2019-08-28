@@ -296,6 +296,35 @@ delete from mongodb.com users collection, then create new
     | python -m json.tool
 
 
+<br/>
+
+### 027 Post Like Unlike Routes
+
+    $ curl \
+    -H "Content-Type: application/json" \
+    -H "X-Auth-Token: <Token ID>" \
+    -X PUT localhost:5000/api/posts/like/<Post Id> \
+    | python -m json.tool
+
+<br/>
+
+    $ curl \
+    -H "Content-Type: application/json" \
+    -H "X-Auth-Token: <Token ID>" \
+    -X GET localhost:5000/api/posts/ \
+    | python -m json.tool
+
+<br/>
+
+    $ curl \
+    -H "Content-Type: application/json" \
+    -H "X-Auth-Token: <Token ID>" \
+    -X PUT localhost:5000/api/posts/unlike/<Post Id> \
+    | python -m json.tool
+
+
+
+
 
 ---
 
