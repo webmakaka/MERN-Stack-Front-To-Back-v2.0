@@ -323,8 +323,35 @@ delete from mongodb.com users collection, then create new
     | python -m json.tool
 
 
+<br/>
+
+### 028 Add Remove Comment Routes
 
 
+    $ curl \
+    -d '{ 
+        "text":"Another stupid comment from another stupid guy!"
+    }' \
+    -H "Content-Type: application/json" \
+    -H "X-Auth-Token: <Token ID>" \
+    -X POST localhost:5000/api/posts/comment/<Post Id> \
+    | python -m json.tool
+
+
+<br/>
+
+    $ curl \
+    -H "Content-Type: application/json" \
+    -H "X-Auth-Token: <Token ID>" \
+    -X GET localhost:5000/api/posts/ \
+    | python -m json.tool
+
+<br/>
+
+    $ curl \
+    -H "X-Auth-Token: <Token ID>" \
+    -X DELETE localhost:5000/api/posts/comment/<Post Id>/<Comment Id> \
+    | python -m json.tool
 
 ---
 
