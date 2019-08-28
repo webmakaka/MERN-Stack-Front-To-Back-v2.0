@@ -249,9 +249,33 @@ delete from mongodb.com users collection, then create new
 
 ### 024 Creating The Post Model
 
+<br/>
+
+### 025 Add Post Route
+
+    $ curl -d '{ 
+        "email":"marley@pochta.ru", 
+        "password": "password1"
+    }' \
+    -H "Content-Type: application/json" \
+    -X POST localhost:5000/api/auth \
+    | python -m json.tool
+
+<br/>
+
+    $ curl -d '{ 
+        "text":"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    }' \
+    -H "Content-Type: application/json" \
+    -H "X-Auth-Token: <Token ID>" \
+    -X POST localhost:5000/api/posts \
+    | python -m json.tool
+
+
 
 ---
 
 **Marley**
 
 <a href="https://jsdev.org">jsdev.org</a>
+
