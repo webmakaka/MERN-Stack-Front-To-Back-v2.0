@@ -272,6 +272,30 @@ delete from mongodb.com users collection, then create new
     | python -m json.tool
 
 
+<br/>
+
+### 026 Get Delete Post Routes
+
+    $ curl \
+    -H "X-Auth-Token: <Token ID>" \
+    -X GET localhost:5000/api/posts \
+    | python -m json.tool
+
+<br/>
+
+    $ curl \
+    -H "X-Auth-Token: <Token ID>" \
+    -X GET localhost:5000/api/posts/<Post Id> \
+    | python -m json.tool
+
+<br/>
+
+    $ curl \
+    -H "X-Auth-Token: <Token ID>" \
+    -X DELETE localhost:5000/api/posts/<Post Id> \
+    | python -m json.tool
+
+
 
 ---
 
