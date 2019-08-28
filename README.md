@@ -240,6 +240,16 @@ delete from mongodb.com users collection, then create new
     -X GET localhost:5000/api/profile/github/marley-nodejs \
     | python -m json.tool
 
+
+<br/>
+
+## 05 Post API Routes
+
+<br/>
+
+### 024 Creating The Post Model
+
+
 ---
 
 **Marley**
