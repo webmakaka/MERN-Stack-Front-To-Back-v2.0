@@ -33,6 +33,14 @@
     http://localhost:3000/register
     http://localhost:3000/login
 
+<br/>
+
+### 034 Register Form useState Hook
+
+<br/>
+
+![Application](../img/pic-06-34.png?raw=true)
+
 ---
 
 **Marley**
