@@ -25,6 +25,14 @@
 
 ![Application](../img/pic-06-32.png?raw=true)
 
+
+<br/>
+
+### 033 React Router Setup
+
+    http://localhost:3000/register
+    http://localhost:3000/login
+
 ---
 
 **Marley**

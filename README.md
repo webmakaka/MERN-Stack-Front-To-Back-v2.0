@@ -7,7 +7,6 @@ https://github.com/bradtraversy/devconnector_2.0
 
 ## [BACKEND](./api/Readme.md)
 
-<br/>
 
 ## [CLIENT](./client/Readme.md)
 
