@@ -11,18 +11,6 @@ https://github.com/bradtraversy/devconnector_2.0
 
 ## [CLIENT](./client/Readme.md)
 
-    $ npx create-react-app client
-    $ cd client
-
-    $ npm install --save axios react-router-dom redux react-redux redux-thunk redux-devtools-extension moment react-moment
-
-    $ rm README.md
-    $ rm README.md
-    $ rm -rf .gitignore
-    
-    $ npm run start
-
-
 
 ---
 
