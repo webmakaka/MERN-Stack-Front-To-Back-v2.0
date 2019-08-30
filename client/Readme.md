@@ -60,9 +60,17 @@
 
 <br/>
 
-### 038 Alert Reducer Action  Types
+### 038 Alert Reducer Action Types
 
     $ npm install --save uuid
+
+<br/>
+
+### 039 Alert Component Action Call
+
+<br/>
+
+![Application](../img/pic-07-39.png?raw=true)
 
 ---
 
