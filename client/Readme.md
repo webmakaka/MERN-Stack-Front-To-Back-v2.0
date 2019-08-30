@@ -50,6 +50,14 @@
 
 ![Application](../img/pic-06-35.png?raw=true)
 
+<br/>
+
+## 07 Redux Setup Alerts
+
+<br/>
+
+### 037 Creating a Redux Store
+
 ---
 
 **Marley**
