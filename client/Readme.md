@@ -58,6 +58,12 @@
 
 ### 037 Creating a Redux Store
 
+<br/>
+
+### 038 Alert Reducer Action  Types
+
+    $ npm install --save uuid
+
 ---
 
 **Marley**
