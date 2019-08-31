@@ -72,6 +72,14 @@
 
 ![Application](../img/pic-07-39.png?raw=true)
 
+<br/>
+
+## 08 React User Authentication
+
+<br/>
+
+### 040 Auth Reducer Register Action
+
 ---
 
 **Marley**
