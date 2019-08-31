@@ -80,6 +80,10 @@
 
 ### 040 Auth Reducer Register Action
 
+<br/>
+
+### 041 Load User Set Auth Token
+
 ---
 
 **Marley**
