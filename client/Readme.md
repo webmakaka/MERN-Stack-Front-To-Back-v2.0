@@ -88,6 +88,14 @@
 
 ### 042 User Login
 
+<br/>
+
+### 043 Logout Navbar Links
+
+<br/>
+
+![Application](../img/pic-08-43.png?raw=true)
+
 ---
 
 **Marley**
