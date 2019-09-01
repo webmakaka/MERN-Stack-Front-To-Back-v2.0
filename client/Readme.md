@@ -96,6 +96,16 @@
 
 ![Application](../img/pic-08-43.png?raw=true)
 
+<br/>
+
+## 09 Dashboard Profile Management
+
+<br/>
+
+### 044 Protected Route For Dashboard
+
+
+
 ---
 
 **Marley**
