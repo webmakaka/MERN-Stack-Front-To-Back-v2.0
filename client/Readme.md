@@ -120,6 +120,15 @@
 
 ### 048 Create Profile Action
 
+<br/>
+
+### 049 Edit Profile
+
+<br/>
+
+![Application](../img/pic-09-49.png?raw=true)
+
+
 ---
 
 **Marley**
