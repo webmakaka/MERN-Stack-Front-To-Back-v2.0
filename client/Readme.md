@@ -128,6 +128,17 @@
 
 ![Application](../img/pic-09-49.png?raw=true)
 
+<br/>
+
+### 050 Add Education Experiences
+
+<br/>
+
+![Application](../img/pic-09-50-1.png?raw=true)
+
+<br/>
+
+![Application](../img/pic-09-50-2.png?raw=true)
 
 ---
 
