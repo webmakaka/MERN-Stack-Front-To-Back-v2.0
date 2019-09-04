@@ -152,7 +152,13 @@
 
 ### 052 Delete Education Experiences Account
 
+<br/>
 
+## 10 Profile DIsplay
+
+<br/>
+
+### 053 Finish Profile Actions Reducer
 
 ---
 
