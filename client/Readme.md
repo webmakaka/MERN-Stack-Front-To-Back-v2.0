@@ -154,11 +154,19 @@
 
 <br/>
 
-## 10 Profile DIsplay
+## 10 Profile Display
 
 <br/>
 
 ### 053 Finish Profile Actions Reducer
+
+<br/>
+
+### 054 Display Profiles
+
+<br/>
+
+![Application](../img/pic-10-54.png?raw=true)
 
 ---
 
