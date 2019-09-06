@@ -185,6 +185,15 @@
 
 ![Application](../img/pic-10-57.png?raw=true)
 
+
+<br/>
+
+### 058 Profile Experience Education Display
+
+<br/>
+
+![Application](../img/pic-10-58.png?raw=true)
+
 ---
 
 **Marley**
