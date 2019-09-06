@@ -177,6 +177,14 @@
 
 ### 056 Starting On The Profile
 
+<br/>
+
+### 057 ProfileTop ProfileAbout Components
+
+<br/>
+
+![Application](../img/pic-10-57.png?raw=true)
+
 ---
 
 **Marley**
