@@ -9,7 +9,7 @@ const Experience = ({ experience, deleteExperience }) => {
   const experiences = experience.map(exp => (
     <tr key={exp._id}>
       <td>{exp.company}</td>
-      <td classNmae="hide-sm">{exp.title}</td>
+      <td className="hide-sm">{exp.title}</td>
       <td>
         <Moment format='YYYY/MM/DD'>{exp.from}</Moment> -
         {exp.to === null ? (' Now') : (<Moment format='YYYY/MM/DD'>{exp.to}</Moment>)}
@@ -27,8 +27,8 @@ const Experience = ({ experience, deleteExperience }) => {
         <thead>
           <tr>
             <th>Company</th>
-            <th classNmae="hide-sm">Title</th>
-            <th classNmae="hide-sm">Years</th>
+            <th className="hide-sm">Title</th>
+            <th className="hide-sm">Years</th>
             <th />
           </tr>
         </thead>
@@ -39,7 +39,7 @@ const Experience = ({ experience, deleteExperience }) => {
 };
 
 Experience.propTypes = {
-  experiecne: PropTypes.array.isRequired,
+  experience: PropTypes.array.isRequired,
   deleteExperience: PropTypes.func.isRequired,
 };
 
