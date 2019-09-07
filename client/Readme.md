@@ -199,6 +199,9 @@
 
 ### 059 Displaying Github Repos
 
+<br/>
+
+![Application](../img/pic-10-59.png?raw=true)
 
 <br/>
 
@@ -207,6 +210,14 @@
 <br/>
 
 ### 060 Post Reducer Action Initial Component
+
+<br/>
+
+### 061 Post Item Component
+
+<br/>
+
+![Application](../img/pic-11-61.png?raw=true)
 
 ---
 
