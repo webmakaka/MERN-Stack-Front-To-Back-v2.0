@@ -227,6 +227,10 @@
 
 ![Application](../img/pic-11-62.png?raw=true)
 
+<br/>
+
+### 063 Deleting Posts
+
 ---
 
 **Marley**
