@@ -247,6 +247,14 @@
 
 ![Application](../img/pic-11-65.png?raw=true)
 
+<br/>
+
+### 066 Adding Comments
+
+<br/>
+
+![Application](../img/pic-11-66.png?raw=true)
+
 ---
 
 **Marley**
