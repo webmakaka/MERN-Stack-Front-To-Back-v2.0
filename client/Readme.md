@@ -239,6 +239,14 @@
 
 ![Application](../img/pic-11-64.png?raw=true)
 
+<br/>
+
+### 065 Single Post Display
+
+<br/>
+
+![Application](../img/pic-11-65.png?raw=true)
+
 ---
 
 **Marley**

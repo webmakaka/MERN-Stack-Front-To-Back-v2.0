@@ -1,4 +1,5 @@
 import {
+  GET_POST,
   GET_POSTS,
   ADD_POST,
   DELETE_POST,
@@ -17,6 +18,12 @@ export default function (state = initialState, action) {
   const { type, payload } = action;
 
   switch (type) {
+    case GET_POST:
+      return {
+        ...state,
+        post: payload,
+        loading: false
+      };
     case GET_POSTS:
       return {
         ...state,
