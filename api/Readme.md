@@ -364,7 +364,7 @@ delete from mongodb.com users collection, then create new
 
 <br/>
 
-    # vi /etc/systemd/system/api.anketa.info.service
+    # cp api.anketa.info.service /etc/systemd/system/api.anketa.info.service
 
 <br/>
 

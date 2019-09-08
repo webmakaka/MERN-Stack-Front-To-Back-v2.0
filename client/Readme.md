@@ -231,6 +231,14 @@
 
 ### 063 Deleting Posts
 
+<br/>
+
+### 064 Adding Posts
+
+<br/>
+
+![Application](../img/pic-11-64.png?raw=true)
+
 ---
 
 **Marley**
