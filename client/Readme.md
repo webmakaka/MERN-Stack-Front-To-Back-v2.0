@@ -265,6 +265,14 @@
 
 **I have found a mistake with removing comments. Not right comment is removing!**
 
+<br/>
+
+## 13 Issues Added Features etc
+
+<br/>
+
+### 072 Not Found Page Theme Workaround
+
 ---
 
 **Marley**
