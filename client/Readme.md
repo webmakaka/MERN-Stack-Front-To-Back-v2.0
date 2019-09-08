@@ -255,6 +255,16 @@
 
 ![Application](../img/pic-11-66.png?raw=true)
 
+<br/>
+
+### 067 Comment Display Delete
+
+<br/>
+
+![Application](../img/pic-11-67.png?raw=true)
+
+**I have found a mistake with removing comments. Not right comment is removing!**
+
 ---
 
 **Marley**
