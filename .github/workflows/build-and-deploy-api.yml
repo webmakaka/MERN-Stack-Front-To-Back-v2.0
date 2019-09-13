@@ -20,8 +20,8 @@ jobs:
 
     - name: Push the image to GPR
       run: |
-        docker login docker.pkg.github.com -u publisher -p "${GITHUB_PACKAGE_REGISTRY_TOKEN}"
+        docker login docker.pkg.github.com -u marley-nodejs -p "${GITHUB_PASSWORD}"
         docker push docker.pkg.github.com/marley-nodejs/mern-stack-front-to-back-v2.0/api.anketa.info:latest
       env:
-        GITHUB_PACKAGE_REGISTRY_TOKEN: ${{ secrets.GITHUB_PASSWORD }}
+        GITHUB_PASSWORD: ${{ secrets.GITHUB_PASSWORD }}
 
