@@ -16,7 +16,7 @@ jobs:
 
     - name: Build the Docker container image
 #      run: docker build -t docker.pkg.github.com/chrispat/actions-container-service/app-services:latest .
-      run: docker build -t docker.pkg.github.com/marley-nodejs/MERN-Stack-Front-To-Back-v2.0/api.anketa.info:latest -f Dockerfile ./MERN-Stack-Front-To-Back-v2.0/api
+      run: docker build -t docker.pkg.github.com/marley-nodejs/mern-stack-front-to-back-v2.0/api.anketa.info:latest -f Dockerfile ./MERN-Stack-Front-To-Back-v2.0/api
 
 #    - name: Push the image to GPR
 #      run: |
