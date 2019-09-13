@@ -16,6 +16,9 @@ jobs:
 
     - name: Build the Docker container image
       run: docker build ./api -f ./api/Dockerfile -t docker.pkg.github.com/marley-nodejs/mern-stack-front-to-back-v2.0/api.anketa.info:latest
+      
+    - name: SHOW IMAGES
+      run: docker images
 
     - name: Push the image to Github Package Registry (GPR)
       run: |
