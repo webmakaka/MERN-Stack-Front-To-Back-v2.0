@@ -13,18 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    
-    - name: TEST
-      run: ls
 
     - name: Build the Docker container image
 #      run: docker build -t docker.pkg.github.com/chrispat/actions-container-service/app-services:latest .
       run: docker build ./api -f ./api/Dockerfile -t docker.pkg.github.com/marley-nodejs/mern-stack-front-to-back-v2.0/api.anketa.info:latest
 
-#    - name: Push the image to GPR
-#      run: |
-#        docker login docker.pkg.github.com -u publisher -p "${GITHUB_PACKAGE_REGISTRY_TOKEN}"
-#        docker push docker.pkg.github.com/chrispat/actions-container-service/app-services:latest
-#      env:
-#        GITHUB_PACKAGE_REGISTRY_TOKEN: ${{ secrets.GITHUB_PACKAGE_REGISTRY_TOKEN }}
+    - name: Push the image to GPR
+      run: |
+        docker login docker.pkg.github.com -u publisher -p "${GITHUB_PACKAGE_REGISTRY_TOKEN}"
+        docker push docker.pkg.github.com/marley-nodejs/mern-stack-front-to-back-v2.0/api.anketa.info:latest
+      env:
+        GITHUB_PACKAGE_REGISTRY_TOKEN: ${{ secrets.GITHUB_PASSWORD }}
 
