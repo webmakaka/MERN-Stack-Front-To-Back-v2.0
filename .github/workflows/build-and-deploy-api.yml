@@ -15,14 +15,14 @@ jobs:
     - uses: actions/checkout@master
 
     - name: Build the Docker container image
-      run: docker build ./api -f ./api/Dockerfile -t docker.pkg.github.com/marley-nodejs/mern-stack-front-to-back/api.anketa.info:latest
+      run: docker build ./api -f ./api/Dockerfile -t docker.pkg.github.com/marley-nodejs/api.anketa.info:latest
       # run: docker build ./api -f ./api/Dockerfile -t docker.pkg.github.com/marley-nodejs/mern-stack-front-to-back-v2.0/api.anketa.info:latest
       
     - name: Push the image to Github Package Registry (GPR)
       run: |
         docker login docker.pkg.github.com -u publisher -p "${GITHUB_PACKAGE_REGISTRY_TOKEN}"
         docker images
-        docker push docker.pkg.github.com/marley-nodejs/mern-stack-front-to-back/api.anketa.info:latest
+        docker push docker.pkg.github.com/marley-nodejs/api.anketa.info:latest
         # docker push docker.pkg.github.com/marley-nodejs/mern-stack-front-to-back-v2.0/api.anketa.info:latest
       env:
         GITHUB_PACKAGE_REGISTRY_TOKEN: ${{ secrets.GITHUB_PACKAGE_REGISTRY_TOKEN }}
