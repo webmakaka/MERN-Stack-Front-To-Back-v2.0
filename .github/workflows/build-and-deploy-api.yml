@@ -21,7 +21,11 @@ jobs:
       run: |
         docker login docker.pkg.github.com -u publisher -p "${GITHUB_PACKAGE_REGISTRY_TOKEN}"
         echo "-----------"
-        docker --debug push docker.pkg.github.com/marley-nodejs/mern-stack-front-to-back-v2.0/api.anketa.info:latest
+        echo "-----------"
+        echo "-----------"
+        docker --debug --log-level "debug" push docker.pkg.github.com/marley-nodejs/mern-stack-front-to-back-v2.0/api.anketa.info:latest
+        echo "-----------"
+        echo "-----------"
         echo "-----------"
       env:
         GITHUB_PACKAGE_REGISTRY_TOKEN: ${{ secrets.GITHUB_PACKAGE_REGISTRY_TOKEN }}
