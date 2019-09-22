@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Build the Docker container image
-      run: docker build -t marley/api.anketa.info:latest .
+      run: docker build ./api -f ./api/Dockerfile -t marley/api.anketa.info:latest
       
     - name: Push the image to hub.docker.com
       run: |
