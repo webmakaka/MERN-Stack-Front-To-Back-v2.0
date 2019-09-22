@@ -13,14 +13,23 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@master
-
     - name: Build the Docker container image
-      run: docker build ./client -f ./client/Dockerfile -t docker.pkg.github.com/marley-nodejs/mern-stack-front-to-back-v2.0/client.anketa.info:latest
-
-    - name: Push the image to Github Package Registry (GPR)
+      run: docker build ./client -f ./client/Dockerfile -t marley/client.anketa.info:latest
+    - name: Push the image to hub.docker.com
       run: |
-        docker login docker.pkg.github.com -u publisher -p "${GITHUB_PACKAGE_REGISTRY_TOKEN}"
-        docker push docker.pkg.github.com/marley-nodejs/mern-stack-front-to-back-v2.0/client.anketa.info:latest
+        docker login -u marley -p "${DOCKER_HUB_PASS}"
+        docker push marley/client.anketa.info:latest
       env:
-        GITHUB_PACKAGE_REGISTRY_TOKEN: ${{ secrets.GITHUB_PACKAGE_REGISTRY_TOKEN }}
+        DOCKER_HUB_PASS: ${{ secrets.DOCKER_HUB_PASS }}
+    
+# Build and push to Github Package Registry (GPR) (Not works for now)
+#    - name: Build the Docker container image
+#      run: docker build ./client -f ./client/Dockerfile -t docker.pkg.github.com/marley-nodejs/mern-stack-front-to-back-v2.0/client.anketa.info:latest
+#
+#    - name: Push the image to Github Package Registry (GPR)
+#      run: |
+#        docker login docker.pkg.github.com -u publisher -p "${GITHUB_PACKAGE_REGISTRY_TOKEN}"
+#        docker push docker.pkg.github.com/marley-nodejs/mern-stack-front-to-back-v2.0/client.anketa.info:latest
+#      env:
+#        GITHUB_PACKAGE_REGISTRY_TOKEN: ${{ secrets.GITHUB_PACKAGE_REGISTRY_TOKEN }}
 
