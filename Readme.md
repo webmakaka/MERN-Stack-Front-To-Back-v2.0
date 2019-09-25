@@ -28,7 +28,7 @@ https://github.com/bradtraversy/devconnector_2.0
 <br/>
 
     # cd client
-    # docker build -t marley/anketa.info -f Dockerfile .
+    # docker build -t marley/client.anketa.info -f Dockerfile .
 
 
 <br/>
@@ -37,8 +37,8 @@ https://github.com/bradtraversy/devconnector_2.0
 
 
     # cd proxy/svc
-    # cp api.anketa.info.service /etc/systemd/system/api.anketa.info.service
-    # cp anketa.info.service /etc/systemd/system/anketa.info.service
+    # cp api.anketa.info.service /etc/systemd/system/
+    # cp client.anketa.info.service /etc/systemd/system/
 
 
 <br/>
@@ -51,9 +51,9 @@ https://github.com/bradtraversy/devconnector_2.0
 
 <br/>
 
-    # systemctl enable anketa.info.service
-    # systemctl start  anketa.info.service
-    # systemctl status anketa.info.service
+    # systemctl enable client.anketa.info.service
+    # systemctl start  client.anketa.info.service
+    # systemctl status client.anketa.info.service
 
 
 <br/>
@@ -65,7 +65,7 @@ https://github.com/bradtraversy/devconnector_2.0
 
 <br/>
 
-    # cp proxy.service /etc/systemd/system/proxy.service
+    # cp proxy.service /etc/systemd/system/
 
 <br/>
 
