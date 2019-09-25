@@ -12,14 +12,34 @@ https://github.com/bradtraversy/devconnector_2.0
 
 <br/>
 
-# (NOT Tested FOR NOW!!!)
+### Run Virtual Machine by Vagrant
+
+    $ cd ~
+    $ git clone https://github.com/marley-nodejs/MERN-Stack-Front-To-Back-v2.0
+    $ cd MERN-Stack-Front-To-Back-v2.0/vm
+    $ vagrant up
+    $ vagrant box update
+    $ vagrant status
+    $ vagrant ssh controller
+
+<br/>
+
+### Iside Virtual Machine
+
+<br/>
+
+    $ cd ~
+    $ git clone https://github.com/marley-nodejs/MERN-Stack-Front-To-Back-v2.0
+    $ cd MERN-Stack-Front-To-Back-v2.0
+
+
+<br/>
 
 ## Dockerizing API (api.anketa.info)
 
 <br/>
 
-    # cd api
-    # docker build -t marley/api.anketa.info -f Dockerfile .
+    $ docker build ./api -f ./api/Dockerfile -t marley/api.anketa.info:latest
 
 <br/>
 
@@ -27,9 +47,7 @@ https://github.com/bradtraversy/devconnector_2.0
 
 <br/>
 
-    # cd client
-    # docker build -t marley/client.anketa.info -f Dockerfile .
-
+    $ docker build ./client -f ./client/Dockerfile -t marley/client.anketa.info:latest
 
 <br/>
 
@@ -55,6 +73,9 @@ https://github.com/bradtraversy/devconnector_2.0
     # systemctl start  client.anketa.info.service
     # systemctl status client.anketa.info.service
 
+<br/>
+
+http://192.168.0.11:65068/
 
 <br/>
 
