@@ -64,11 +64,13 @@ https://github.com/bradtraversy/devconnector_2.0
 
 <br/>
 
-## Dockerizing Proxy
+## Dockerizing Nginx Proxy
 
     $ docker build ./proxy -f ./proxy/Dockerfile -t techhead/proxy
 
 <br/>
+
+## Copy Services configs
 
     $ cd proxy/svc
     $ sudo cp api.anketa.info.service /etc/systemd/system/
@@ -121,7 +123,19 @@ API Check:
     192.168.0.11 anketa.info
 
 
+<br/>
+
 http://anketa.info
+
+
+<br/>
+
+![Application](/img/pic-svc-01.png?raw=true)
+
+
+<br/>
+
+![Application](/img/pic-svc-02.png?raw=true)
 
 
 ---
