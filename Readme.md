@@ -29,11 +29,15 @@ https://github.com/bradtraversy/devconnector_2.0
 
     $ sudo su -
 
-    # sudo ufw disable
+    # ufw disable
 
     # vi /etc/hosts
     192.168.0.11 anketa.info
+    192.168.0.11 api.anketa.info
     
+<br/>
+
+^D
 
 <br/>
 
@@ -48,7 +52,7 @@ https://github.com/bradtraversy/devconnector_2.0
 
 <br/>
 
-    $ docker build ./api -f ./api/Dockerfile -t techheadapi.anketa.info:latest
+    $ docker build ./api -f ./api/Dockerfile -t techhead/api.anketa.info:latest
 
 <br/>
 
@@ -56,16 +60,20 @@ https://github.com/bradtraversy/devconnector_2.0
 
 <br/>
 
-    $ docker build ./client -f ./client/Dockerfile -t techheadclient.anketa.info:latest
+    $ docker build ./client -f ./client/Dockerfile -t techhead/client.anketa.info:latest
 
 <br/>
 
 ## Dockerizing Proxy
 
+    $ docker build ./proxy -f ./proxy/Dockerfile -t techhead/proxy
+
+<br/>
 
     $ cd proxy/svc
     $ sudo cp api.anketa.info.service /etc/systemd/system/
     $ sudo cp client.anketa.info.service /etc/systemd/system/
+    $ sudo cp proxy.service /etc/systemd/system/
 
 
 <br/>
@@ -84,37 +92,36 @@ https://github.com/bradtraversy/devconnector_2.0
 
 <br/>
 
-http://192.168.0.11:65068/
-
-<br/>
-
-## Setup proxy
-
-    $ cd proxy
-    $ docker build -t techhead/proxy -f Dockerfile .
-
-<br/>
-
-    $ sudo cp proxy.service /etc/systemd/system/
-
-<br/>
-
     $ sudo systemctl enable proxy.service
     $ sudo systemctl start  proxy.service
     $ sudo systemctl status proxy.service
 
 <br/>
 
+    $ curl anketa.info
 
-http://192.168.0.11/
-
-Add not router rule for redirects from port 80 on server host port 80. Here is 192.168.1.101
 
 <br/>
 
+API Check:
+
+    $ curl \
+    -X GET api.anketa.info/api/profile/github/marley-nodejs \
+    | python -m json.tool
+
+
+
+<br/>
+
+### Localhost
+
+    $ sudo su -
+
+    # vi /etc/hosts
+    192.168.0.11 anketa.info
+
 
 http://anketa.info
-
 
 
 ---
