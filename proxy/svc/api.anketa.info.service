@@ -10,10 +10,10 @@ Restart=always
 TimeoutStartSec=0
 ExecStartPre=-/usr/bin/docker kill api.anketa.info
 ExecStartPre=-/usr/bin/docker rm api.anketa.info
-ExecStartPre=-/usr/bin/docker pull marley/api.anketa.info:latest
+ExecStartPre=-/usr/bin/docker pull techhead/api.anketa.info:latest
 ExecStart=/bin/sh -c '/usr/bin/docker run --name api.anketa.info   \
  -p 65077:5000                        \
- marley/api.anketa.info'
+ techhead/api.anketa.info'
 ExecStop=-/usr/bin/docker kill api.anketa.info
 ExecStop=-/usr/bin/docker rm api.anketa.info
 

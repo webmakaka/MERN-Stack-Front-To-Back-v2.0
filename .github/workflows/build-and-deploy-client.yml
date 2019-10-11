@@ -14,11 +14,11 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Build the Docker container image
-      run: docker build ./client -f ./client/Dockerfile -t marley/client.anketa.info:latest
+      run: docker build ./client -f ./client/Dockerfile -t techhead/client.anketa.info:latest
     - name: Push the image to hub.docker.com
       run: |
-        docker login -u marley -p "${DOCKER_HUB_PASS}"
-        docker push marley/client.anketa.info:latest
+        docker login -u techhead -p "${DOCKER_HUB_PASS}"
+        docker push techhead/client.anketa.info:latest
       env:
         DOCKER_HUB_PASS: ${{ secrets.DOCKER_HUB_PASS }}
     

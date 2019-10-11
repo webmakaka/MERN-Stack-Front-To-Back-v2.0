@@ -10,10 +10,10 @@ Restart=always
 TimeoutStartSec=0
 ExecStartPre=-/usr/bin/docker kill proxy
 ExecStartPre=-/usr/bin/docker rm proxy
-ExecStartPre=-/usr/bin/docker pull marley/proxy:latest
+ExecStartPre=-/usr/bin/docker pull techhead/proxy:latest
 ExecStart=/bin/sh -c '/usr/bin/docker run --name proxy   \
  -p 80:80                        \
- marley/proxy'
+ techhead/proxy'
 ExecStop=-/usr/bin/docker kill proxy
 ExecStop=-/usr/bin/docker rm proxy
 
