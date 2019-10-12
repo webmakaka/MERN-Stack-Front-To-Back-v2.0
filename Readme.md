@@ -12,6 +12,10 @@ https://github.com/bradtraversy/devconnector_2.0
 
 <br/>
 
+# Run application on virtual host 
+
+<br/>
+
 ### Run Virtual Machine by Vagrant
 
     $ cd ~
@@ -48,7 +52,7 @@ https://github.com/bradtraversy/devconnector_2.0
 
 <br/>
 
-## Dockerizing API (api.anketa.info)
+## [Optional step] Dockerizing API (api.anketa.info)
 
 <br/>
 
@@ -56,7 +60,7 @@ https://github.com/bradtraversy/devconnector_2.0
 
 <br/>
 
-## Dockerizing Client (anketa.info)
+## [Optional step] Dockerizing Client (anketa.info)
 
 <br/>
 
@@ -64,7 +68,7 @@ https://github.com/bradtraversy/devconnector_2.0
 
 <br/>
 
-## Dockerizing Nginx Proxy
+## [Optional step] Dockerizing Nginx Proxy
 
     $ docker build ./proxy -f ./proxy/Dockerfile -t techhead/proxy
 
@@ -137,6 +141,73 @@ http://anketa.info
 
 ![Application](/img/pic-svc-02.png?raw=true)
 
+
+
+<br/>
+
+# Run application in Kubernetes (IN DEVELOPMENT)
+
+<a href="/linux/servers/containers/kubernetes/kubeadm/prepared-cluster/">Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox</a>
+
+<a href="/linux/servers/containers/kubernetes/kubeadm/metal-load-balancer/">MetalLB Load Balancer in Kubernetes</a>
+
+
+<br/>
+
+    $ kubectl apply -f kubernetes/client-deployment.yaml
+
+<br/>
+
+    $ kubectl get deploy
+    NAME                READY   UP-TO-DATE   AVAILABLE   AGE
+    client-deployment   3/3     3            3           23s
+
+<br/>
+
+    $ kubectl get pods
+    NAME                                 READY   STATUS    RESTARTS   AGE
+    client-deployment-867f8b5564-2qzss   1/1     Running   0          20s
+    client-deployment-867f8b5564-rl2lr   1/1     Running   0          20s
+    client-deployment-867f8b5564-vssht   1/1     Running   0          20s
+
+<br/>
+
+    $ kubectl expose deploy client-deployment --port 80 --type LoadBalancer
+
+<br/>
+
+    $ kubectl get svc client-deployment
+    NAME                TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)        AGE
+    client-deployment   LoadBalancer   10.108.103.91   192.168.0.20   80:32406/TCP   23s
+
+
+<br/>
+
+    Контейнеры падают из за того, что в конфиге nginx указан адрес api.anketa.info. 
+
+<br/>
+
+    Я пока не знаю, как передать значение хоста.
+
+<br/>
+
+    // to delete
+    $ kubectl delete svc client-deployment
+    $ kubectl delete -f kubernetes/client-deployment.yaml
+
+
+<!--
+
+kubectl edit deployment client-deployment
+
+```
+  hostAliases:
+  - ip: "192.168.0.20"
+    hostnames:
+    - "api.anketa.info"
+```
+
+-->
 
 ---
 
