@@ -172,6 +172,37 @@ http://anketa.info
 
 <br/>
 
+    $ kubectl edit deployment client-deployment
+
+<br/>
+
+Inside spec.template.spec add
+
+```
+    spec:
+      hostAliases:
+      - ip: "192.168.0.20"
+        hostnames:
+        - "api.anketa.info"
+```
+
+To be
+
+```
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        component: web
+    spec:
+      hostAliases:
+      - ip: "192.168.0.20"
+        hostnames:
+        - "api.anketa.info"
+```
+
+<br/>
+
     $ kubectl expose deploy client-deployment --port 80 --type LoadBalancer
 
 <br/>
@@ -183,31 +214,15 @@ http://anketa.info
 
 <br/>
 
-    Контейнеры падают из за того, что в конфиге nginx указан адрес api.anketa.info. 
+http://192.168.0.20
 
 <br/>
 
-    Я пока не знаю, как передать значение хоста.
-
-<br/>
-
-    // to delete
+    // to delete 
     $ kubectl delete svc client-deployment
     $ kubectl delete -f kubernetes/client-deployment.yaml
 
 
-<!--
-
-kubectl edit deployment client-deployment
-
-```
-  hostAliases:
-  - ip: "192.168.0.20"
-    hostnames:
-    - "api.anketa.info"
-```
-
--->
 
 ---
 
