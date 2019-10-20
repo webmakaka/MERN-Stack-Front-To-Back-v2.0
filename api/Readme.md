@@ -28,7 +28,7 @@
  
 <br/>
 
-### 010 Request  Body Validation
+### 010 Request Body Validation
 
     $ npm install --save mongoose express-validator
 
