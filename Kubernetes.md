@@ -135,7 +135,7 @@ Inside spec.template.spec add hostAliases
 <br/>
 
     // POSSIBLE HERE SHOULD BE NOT A LOAD BALANCER
-    $ kubectl expose deploy api-deployment --port 80 --type ClusterIP
+    $ kubectl expose deploy api-deployment --port 80 --type LoadBalancer
 
 
 <br/>

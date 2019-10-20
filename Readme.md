@@ -19,10 +19,7 @@ https://github.com/bradtraversy/devconnector_2.0
 
 **Run Application:**
 
-
 ## [by Vagrant](./Vagrant.md)
-
-<br/>
 
 ## [by Kubernetes (IN DEVELOPMENT)](./Kubernetes.md)
 
