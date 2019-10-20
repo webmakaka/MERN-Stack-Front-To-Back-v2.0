@@ -152,6 +152,17 @@ http://anketa.info
 <a href="/linux/servers/containers/kubernetes/kubeadm/metal-load-balancer/">MetalLB Load Balancer in Kubernetes</a>
 
 
+<br/> ### Localhost
+
+    $ sudo vi /etc/hosts
+
+    192.168.0.20 anketa.info
+    192.168.0.21 api.anketa.info
+
+<br/>
+
+### Client
+
 <br/>
 
     $ kubectl apply -f kubernetes/client-deployment.yaml
@@ -222,6 +233,58 @@ http://192.168.0.20
     $ kubectl delete svc client-deployment
     $ kubectl delete -f kubernetes/client-deployment.yaml
 
+
+<br/>
+
+### API
+
+<br/>
+
+    $ kubectl apply -f kubernetes/api-deployment.yaml
+
+<br/>
+
+    $ kubectl get deploy
+    NAME                READY   UP-TO-DATE   AVAILABLE   AGE
+    api-deployment      3/3     3            3           31s
+    client-deployment   3/3     3            3           8m59s
+
+
+<br/>
+
+    $ kubectl expose deploy api-deployment --port 80 --type LoadBalancer
+
+
+<br/>
+
+    $ kubectl get svc api-deployment
+    NAME             TYPE           CLUSTER-IP     EXTERNAL-IP    PORT(S)        AGE
+    api-deployment   LoadBalancer   10.96.184.79   192.168.0.21   80:31557/TCP   14s
+
+
+<br/>
+
+**Errors**
+
+
+    server started on port 5000
+    querySrv ETIMEOUT _mongodb._tcp.mern-stack-front-to-back-0byar.mongodb.net
+    npm ERR! code ELIFECYCLE
+    npm ERR! errno 1
+    npm ERR! api@1.0.0 start: `node server`
+    npm ERR! Exit status 1
+    npm ERR! 
+    npm ERR! Failed at the api@1.0.0 start script.
+    npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+
+<br/>
+
+API Check:
+
+    $ curl \
+    -X GET api.anketa.info/api/profile/github/marley-nodejs \
+    | python -m json.tool
 
 
 ---
