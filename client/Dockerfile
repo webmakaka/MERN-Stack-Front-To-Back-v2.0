@@ -1,7 +1,7 @@
 FROM node:alpine as builder
 
 RUN apk update && apk upgrade && \
-  apk add --no-cache bash vim less
+  apk add --no-cache bash vim less curl
 
 
 RUN mkdir -p /project

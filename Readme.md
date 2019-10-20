@@ -262,6 +262,46 @@ http://192.168.0.20
     api-deployment   LoadBalancer   10.96.184.79   192.168.0.21   80:31557/TCP   14s
 
 
+
+<br/>
+
+    $ kubectl edit deployment api-deployment
+
+<br/>
+
+Need to set right ip for ds337418.mlab.com
+
+<br/>
+
+Inside spec.template.spec add hostAliases
+
+
+```
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        component: web
+    spec:
+      hostAliases:
+      - ip: "18.234.114.11"
+        hostnames:
+        - "ds337418.mlab.com"
+```
+
+<br/>
+
+    $ kubectl get pods
+    NAME                                 READY   STATUS    RESTARTS   AGE
+    api-deployment-77dbfc7dd9-49hbc      1/1     Running   0          35s
+    api-deployment-77dbfc7dd9-hldv9      1/1     Running   0          39s
+    api-deployment-77dbfc7dd9-rkjcb      1/1     Running   0          30s
+    client-deployment-787b8cdbbc-qc2ht   1/1     Running   0          125m
+    client-deployment-787b8cdbbc-r2kfq   1/1     Running   0          125m
+    client-deployment-787b8cdbbc-xcbb6   1/1     Running   0          125m
+
+<!-- 
+
 <br/>
 
 **Errors**
@@ -275,17 +315,25 @@ http://192.168.0.20
     npm ERR! Exit status 1
     npm ERR! 
     npm ERR! Failed at the api@1.0.0 start script.
-    npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+    npm ERR! This is probably not a problem with npm. There is likely additional logging output above. -->
 
 
 <br/>
 
 API Check:
 
-    $ curl \
-    -X GET api.anketa.info/api/profile/github/marley-nodejs \
-    | python -m json.tool
+    $ curl -X POST -H "Content-Type: application/json" -d '{"name":"marley", "email":"marley@pochta.ru", "password": "password1"}' api.anketa.info/api/users
 
+<br/>
+
+NOT WORKS!!!
+
+
+<br/>
+
+    // to delete 
+    $ kubectl delete svc api-deployment
+    $ kubectl delete -f kubernetes/api-deployment.yaml
 
 ---
 
