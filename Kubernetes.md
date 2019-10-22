@@ -12,8 +12,14 @@
 
     $ sudo vi /etc/hosts
 
-    192.168.0.20 anketa.info
-    192.168.0.21 api.anketa.info
+    192.168.0.21 anketa.info
+    192.168.0.22 api.anketa.info
+
+<br/>
+
+    $ cd ~
+    $ git clone https://github.com/marley-nodejs/MERN-Stack-Front-To-Back-v2.0
+    $ cd MERN-Stack-Front-To-Back-v2.0
 
 <br/>
 
@@ -48,7 +54,7 @@ Inside spec.template.spec add
 ```
     spec:
       hostAliases:
-      - ip: "192.168.0.21"
+      - ip: "192.168.0.22"
         hostnames:
         - "api.anketa.info"
 ```
@@ -76,12 +82,13 @@ To be
 
     $ kubectl get svc client-deployment
     NAME                TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)        AGE
-    client-deployment   LoadBalancer   10.108.103.91   192.168.0.20   80:32406/TCP   23s
+    client-deployment   LoadBalancer   10.109.175.29   192.168.0.21   80:31689/TCP   6s
+
 
 
 <br/>
 
-http://192.168.0.20
+http://192.168.0.21
 
 <br/>
 
@@ -134,15 +141,13 @@ Inside spec.template.spec add hostAliases
 
 <br/>
 
-    // POSSIBLE HERE SHOULD BE NOT A LOAD BALANCER
-    $ kubectl expose deploy api-deployment --port 80 --type LoadBalancer
-
+    $ kubectl expose deploy api-deployment --port 80 --target-port 5000 --type LoadBalancer
 
 <br/>
 
     $ kubectl get svc api-deployment
-    NAME             TYPE           CLUSTER-IP     EXTERNAL-IP    PORT(S)        AGE
-    api-deployment   LoadBalancer   10.96.184.79   192.168.0.21   80:31557/TCP   14s
+    NAME             TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)        AGE
+    api-deployment   LoadBalancer   10.99.229.105   192.168.0.22   80:31614/TCP   6s
 
 <br/>
 
@@ -161,38 +166,16 @@ Inside spec.template.spec add hostAliases
     $ kubectl get pods api-deployment-77dbfc7dd9-49hbc --template='{{(index (index .spec.containers 0).ports 0).containerPort}}{{"\n"}}'
     5000
 
-<!-- 
 
 <br/>
 
-**Errors**
-
-
-    server started on port 5000
-    querySrv ETIMEOUT _mongodb._tcp.mern-stack-front-to-back-0byar.mongodb.net
-    npm ERR! code ELIFECYCLE
-    npm ERR! errno 1
-    npm ERR! api@1.0.0 start: `node server`
-    npm ERR! Exit status 1
-    npm ERR! 
-    npm ERR! Failed at the api@1.0.0 start script.
-    npm ERR! This is probably not a problem with npm. There is likely additional logging output above. 
-    
--->
-
-
-<br/>
-
-API Check:
+**API Check:**
 
     $ curl -X POST -H "Content-Type: application/json" -d '{"name":"marley", "email":"marley@pochta.ru", "password": "password1"}' api.anketa.info/api/users
 
-
 <br/>
 
-NOT WORKS!!!
-
-WORKS ONLY INSIDE CONTAINER
+    $ curl -X GET -H "Content-Type: application/json" api.anketa.info/api/profile
 
 
 <br/>
@@ -200,6 +183,11 @@ WORKS ONLY INSIDE CONTAINER
     // to delete api resources
     $ kubectl delete svc api-deployment
     $ kubectl delete -f kubernetes/api-deployment.yaml
+
+
+<!--
+    kubectl uncordon node1.k8s && kubectl cordon node2.k8s
+-->
 
 ---
 
