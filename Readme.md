@@ -7,11 +7,9 @@ https://github.com/bradtraversy/devconnector_2.0
 
 **My Sources:**
 
-
 ### [API](./api/Readme.md)
 
 ### [CLIENT](./client/Readme.md)
-
 
 <br/>
 
@@ -29,3 +27,5 @@ https://github.com/bradtraversy/devconnector_2.0
 
 <a href="https://jsdev.org">jsdev.org</a>
 
+Any questions on eng: https://t.me/jsdev_org  
+Любые вопросы на русском: https://t.me/jsdev_ru

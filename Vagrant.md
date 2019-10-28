@@ -22,7 +22,7 @@
     # vi /etc/hosts
     192.168.0.11 anketa.info
     192.168.0.11 api.anketa.info
-    
+
 <br/>
 
 ^D
@@ -32,7 +32,6 @@
     $ cd ~
     $ git clone https://github.com/marley-nodejs/MERN-Stack-Front-To-Back-v2.0
     $ cd MERN-Stack-Front-To-Back-v2.0
-
 
 <br/>
 
@@ -65,7 +64,6 @@
     $ sudo cp client.anketa.info.service /etc/systemd/system/
     $ sudo cp proxy.service /etc/systemd/system/
 
-
 <br/>
 
 ## Run as linux service
@@ -90,7 +88,6 @@
 
     $ curl anketa.info
 
-
 <br/>
 
 API Check:
@@ -98,8 +95,6 @@ API Check:
     $ curl \
     -X GET api.anketa.info/api/profile/github/marley-nodejs \
     | python -m json.tool
-
-
 
 <br/>
 
@@ -110,23 +105,17 @@ API Check:
     # vi /etc/hosts
     192.168.0.11 anketa.info
 
-
 <br/>
 
 http://anketa.info
-
 
 <br/>
 
 ![Application](/img/pic-svc-01.png?raw=true)
 
-
 <br/>
 
 ![Application](/img/pic-svc-02.png?raw=true)
-
-
-
 
 ---
 
@@ -134,3 +123,5 @@ http://anketa.info
 
 <a href="https://jsdev.org">jsdev.org</a>
 
+Any questions on eng: https://t.me/jsdev_org  
+Любые вопросы на русском: https://t.me/jsdev_ru
