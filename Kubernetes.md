@@ -10,6 +10,12 @@
 
 ### Localhost
 
+    $ kubectl version --short
+    Client Version: v1.16.2
+    Server Version: v1.16.2
+
+<br/>
+
     $ sudo vi /etc/hosts
 
     192.168.0.21 anketa.info
@@ -69,7 +75,7 @@ To be
         component: web
     spec:
       hostAliases:
-      - ip: "192.168.0.21"
+      - ip: "192.168.0.22"
         hostnames:
         - "api.anketa.info"
 ```
@@ -84,8 +90,6 @@ To be
     NAME                TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)        AGE
     client-deployment   LoadBalancer   10.109.175.29   192.168.0.21   80:31689/TCP   6s
 
-
-
 <br/>
 
 http://192.168.0.21
@@ -95,7 +99,6 @@ http://192.168.0.21
     // to delete client resources
     $ kubectl delete svc client-deployment
     $ kubectl delete -f kubernetes/client-deployment.yaml
-
 
 <br/>
 
@@ -111,33 +114,6 @@ http://192.168.0.21
     NAME                READY   UP-TO-DATE   AVAILABLE   AGE
     api-deployment      3/3     3            3           31s
     client-deployment   3/3     3            3           8m59s
-
-
-<br/>
-
-    $ kubectl edit deployment api-deployment
-
-<br/>
-
-Need to set right ip for ds337418.mlab.com
-
-<br/>
-
-Inside spec.template.spec add hostAliases
-
-
-```
-  template:
-    metadata:
-      creationTimestamp: null
-      labels:
-        component: web
-    spec:
-      hostAliases:
-      - ip: "18.234.114.11"
-        hostnames:
-        - "ds337418.mlab.com"
-```
 
 <br/>
 
@@ -160,12 +136,10 @@ Inside spec.template.spec add hostAliases
     client-deployment-787b8cdbbc-r2kfq   1/1     Running   0          125m
     client-deployment-787b8cdbbc-xcbb6   1/1     Running   0          125m
 
-
 <br/>
 
     $ kubectl get pods api-deployment-77dbfc7dd9-49hbc --template='{{(index (index .spec.containers 0).ports 0).containerPort}}{{"\n"}}'
     5000
-
 
 <br/>
 
@@ -177,13 +151,11 @@ Inside spec.template.spec add hostAliases
 
     $ curl -X GET -H "Content-Type: application/json" api.anketa.info/api/profile
 
-
 <br/>
 
     // to delete api resources
     $ kubectl delete svc api-deployment
     $ kubectl delete -f kubernetes/api-deployment.yaml
-
 
 <!--
     kubectl uncordon node1.k8s && kubectl cordon node2.k8s
@@ -194,4 +166,3 @@ Inside spec.template.spec add hostAliases
 **Marley**
 
 <a href="https://jsdev.org">jsdev.org</a>
-
