@@ -25,7 +25,7 @@ jobs:
 #      env:
 #        DOCKER_HUB_PASS: ${{ secrets.DOCKER_HUB_PASS }}
 
-# Github Package Registry (GPR)   
+# Github Package Registry (GPR)    
 
     - name: Build the Docker container image
       run: docker build ./proxy -f ./proxy/Dockerfile -t docker.pkg.github.com/marley-nodejs/mern-stack-front-to-back-v2.0/proxy:latest
