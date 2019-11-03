@@ -19,7 +19,7 @@ https://github.com/bradtraversy/devconnector_2.0
 
 ## [by Vagrant](./Vagrant.md)
 
-## [by Minikube (Kubernetes) (IN DEVELOPMENT)](./Minikube.md)
+## [by Minikube (Mini Kubernetes) (IN DEVELOPMENT)](./Minikube.md)
 
 ## [by Kubernetes (IN DEVELOPMENT)](./Kubernetes.md)
 

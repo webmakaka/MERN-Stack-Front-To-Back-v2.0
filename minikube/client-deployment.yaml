@@ -16,4 +16,4 @@ spec:
         - name: client
           image: techhead/client.anketa.info:latest
           ports:
-            - containerPort: 3000
+            - containerPort: 80
