@@ -25,7 +25,7 @@
 
     $ cd ~
     $ git clone https://github.com/marley-nodejs/MERN-Stack-Front-To-Back-v2.0
-    $ cd MERN-Stack-Front-To-Back-v2.0
+    $ cd ~/MERN-Stack-Front-To-Back-v2.0
 
 <br/>
 
@@ -130,8 +130,6 @@ http://192.168.0.21
     $ kubectl get pods
     NAME                                 READY   STATUS    RESTARTS   AGE
     api-deployment-77dbfc7dd9-49hbc      1/1     Running   0          35s
-    api-deployment-77dbfc7dd9-hldv9      1/1     Running   0          39s
-    api-deployment-77dbfc7dd9-rkjcb      1/1     Running   0          30s
     client-deployment-787b8cdbbc-qc2ht   1/1     Running   0          125m
     client-deployment-787b8cdbbc-r2kfq   1/1     Running   0          125m
     client-deployment-787b8cdbbc-xcbb6   1/1     Running   0          125m
