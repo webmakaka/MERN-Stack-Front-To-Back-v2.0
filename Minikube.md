@@ -12,6 +12,13 @@
 
 <br/>
 
+    $ mkdir -p ~/projects/dev/js/nodejs/
+    $ cd ~/projects/dev/js/nodejs/
+    $ git clone https://github.com/marley-nodejs/MERN-Stack-Front-To-Back-v2.0
+    $ cd ~/projects/dev/js/nodejs/MERN-Stack-Front-To-Back-v2.0
+
+<br/>
+
     $ kubectl create -f ./minikube
 
 <br/>
@@ -30,6 +37,13 @@
     api-cluster-ip-service      ClusterIP   10.105.35.214   <none>        5000/TCP   42m
     client-cluster-ip-service   ClusterIP   10.96.208.184   <none>        3000/TCP   42m
     kubernetes                  ClusterIP   10.96.0.1       <none>        443/TCP    91m
+
+<br/>
+
+    // Wainting for address assignment
+    $ kubectl get ingress
+    NAME              HOSTS         ADDRESS     PORTS   AGE
+    ingress-service   anketa.info   10.0.2.15   80      102s
 
 <br/>
 
@@ -65,8 +79,15 @@ Not works!!!
 
 <br/>
 
-    $ curl 192.168.99.141:3000
-    curl: (7) Failed to connect to 192.168.99.141 port 3000: Connection refused
+### Debugging
+
+    $ kubectl get pods -n kube-system
+
+    $ kubectl describe pods -n kube-system nginx-ingress-controller-57bf9855c8-gnvmb
+
+    $ kubectl logs -n kube-system nginx-ingress-controller-57bf9855c8-gnvmb
+
+    $ kubectl exec -it -n kube-system nginx-ingress-controller-57bf9855c8-gnvmb cat /etc/nginx/nginx.conf
 
 ---
 
