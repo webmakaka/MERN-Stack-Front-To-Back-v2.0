@@ -2,9 +2,9 @@
 
 # Run Application by Kubernetes (IN DEVELOPMENT)
 
-<a href="https://sysadm.ru/linux/servers/containers/kubernetes/kubeadm/prepared-cluster/">Scripts to run kubernetes cluster</a>
+<a href="https://sysadm.ru/devops/containers/kubernetes/kubeadm/vagrant-centos7-3-node-kubernetes-cluster/">Scripts to run kubernetes cluster</a>
 
-<a href="https://sysadm.ru/linux/servers/containers/kubernetes/kubeadm/metal-load-balancer/">MetalLB Load Balancer in Kubernetes</a>
+<a href="https://sysadm.ru/devops/containers/kubernetes/kubeadm/metal-lb/">MetalLB Load Balancer in Kubernetes</a>
 
 <br/>
 
