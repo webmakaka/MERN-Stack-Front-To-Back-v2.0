@@ -353,9 +353,11 @@ delete from mongodb.com users collection, then create new
     -X DELETE localhost:5000/api/posts/comment/<Post Id>/<Comment Id> \
     | python -m json.tool
 
-
 ---
+
+<br/>
 
 **Marley**
 
-<a href="https://jsdev.org">jsdev.org</a>
+Any questions on eng: https://jsdev.org/chat/  
+Любые вопросы на русском: https://jsdev.ru/chat/
