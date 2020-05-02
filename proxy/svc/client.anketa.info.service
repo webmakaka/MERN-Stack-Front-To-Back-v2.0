@@ -10,11 +10,11 @@ Restart=always
 TimeoutStartSec=0
 ExecStartPre=-/usr/bin/docker kill client.anketa.info
 ExecStartPre=-/usr/bin/docker rm client.anketa.info
-ExecStartPre=-/usr/bin/docker pull techhead/client.anketa.info:latest
+ExecStartPre=-/usr/bin/docker pull webmakaka/client.anketa.info:latest
 ExecStart=/bin/sh -c '/usr/bin/docker run --name client.anketa.info   \
   --add-host=api.anketa.info:192.168.0.11 \
   -p 65068:80                        \
- techhead/client.anketa.info'
+ webmakaka/client.anketa.info'
 ExecStop=-/usr/bin/docker kill client.anketa.info
 ExecStop=-/usr/bin/docker rm client.anketa.info
 

@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: client
-          image: techhead/client.anketa.info:latest
+          image: webmakaka/client.anketa.info:latest
           ports:
             - containerPort: 80

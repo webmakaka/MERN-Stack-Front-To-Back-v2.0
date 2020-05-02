@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: api
-          image: techhead/api.anketa.info:latest
+          image: webmakaka/api.anketa.info:latest
           ports:
             - containerPort: 5000

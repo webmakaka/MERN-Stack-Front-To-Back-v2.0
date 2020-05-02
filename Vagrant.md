@@ -39,7 +39,7 @@
 
 <br/>
 
-    $ docker build ./api -f ./api/Dockerfile -t techhead/api.anketa.info:latest
+    $ docker build ./api -f ./api/Dockerfile -t webmakaka/api.anketa.info:latest
 
 <br/>
 
@@ -47,13 +47,13 @@
 
 <br/>
 
-    $ docker build ./client -f ./client/Dockerfile -t techhead/client.anketa.info:latest
+    $ docker build ./client -f ./client/Dockerfile -t webmakaka/client.anketa.info:latest
 
 <br/>
 
 ## [Optional step] Dockerizing Nginx Proxy
 
-    $ docker build ./proxy -f ./proxy/Dockerfile -t techhead/proxy
+    $ docker build ./proxy -f ./proxy/Dockerfile -t webmakaka/proxy
 
 <br/>
 
