@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mern-stack-front-to-back-v2-api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mern-stack-front-to-back-v2-api
+  template:
+    metadata:
+      labels:
+        app: mern-stack-front-to-back-v2-api
+    spec:
+      containers:
+        - name: mern-stack-front-to-back-v2-api
+          image: webmakaka/mern-stack-front-to-back-v2-api
+          env:
+            - name: MONGO_URI
+              value: 'mongodb://mongo-db-svc:27017/mongo-db'
+            - name: JWT_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret
+                  key: JWT_KEY

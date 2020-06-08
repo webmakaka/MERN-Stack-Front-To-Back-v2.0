@@ -12,9 +12,6 @@ import store from './store';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 
-
-
-
 import './App.css';
 
 if (localStorage.token) {
@@ -38,7 +35,7 @@ const App = () => {
         </Fragment>
       </Router>
     </Provider>
-  )
+  );
 };
 
 export default App;

@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:12.16.3-alpine3.9
 
 RUN apk update && apk upgrade && \
   apk add --no-cache vim bash git curl
@@ -6,7 +6,7 @@ RUN apk update && apk upgrade && \
 WORKDIR '/project'
 
 COPY ./package*.json ./
-RUN npm install
+RUN npm install --only=prod --silent
 
 COPY . ./
 

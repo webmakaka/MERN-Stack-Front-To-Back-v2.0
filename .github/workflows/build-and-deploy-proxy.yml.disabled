@@ -1,4 +1,4 @@
-name: Build and Deploy API
+name: Build and Deploy Proxy
 on:
   pull_request:
     branches:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: Build API
+    name: Build Proxy
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@master
@@ -17,22 +17,22 @@ jobs:
       # DOCKERHUB
 
       - name: Build the Docker container image
-        run: docker build ./app/api -f ./app/api/Dockerfile -t webmakaka/api.anketa.info:latest
-
+        run: docker build ./proxy -f ./proxy/Dockerfile -t webmakaka/proxy:latest
       - name: Push the image to hub.docker.com
         run: |
           docker login -u webmakaka -p "${DOCKER_HUB_PASS}"
-          docker push webmakaka/api.anketa.info:latest
+          docker push webmakaka/proxy:latest
         env:
           DOCKER_HUB_PASS: ${{ secrets.DOCKER_HUB_PASS }}
+          
 # Github Package Registry (GPR)
 
 # - name: Build the Docker container image
-#   run: docker build ./api -f ./api/Dockerfile -t docker.pkg.github.com/marley-nodejs/mern-stack-front-to-back-v2.0/api.anketa.info:latest
+#   run: docker build ./proxy -f ./proxy/Dockerfile -t docker.pkg.github.com/marley-nodejs/mern-stack-front-to-back-v2.0/proxy:latest
 
 # - name: Push the image to Github Package Registry (GPR)
 #   run: |
 #     docker login docker.pkg.github.com -u publisher -p "${GITHUB_PACKAGE_REGISTRY_TOKEN}"
-#     docker push docker.pkg.github.com/marley-nodejs/mern-stack-front-to-back-v2.0/api.anketa.info:latest
+#     docker push docker.pkg.github.com/marley-nodejs/mern-stack-front-to-back-v2.0/proxy:latest
 #   env:
 #     GITHUB_PACKAGE_REGISTRY_TOKEN: ${{ secrets.GITHUB_PACKAGE_REGISTRY_TOKEN }}
