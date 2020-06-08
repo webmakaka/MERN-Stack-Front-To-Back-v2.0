@@ -72,7 +72,7 @@ minikube start --profile my-profile
 
     $ docker login
 
-Need update webmakaka/mern-stack-the-complite-guide on your data in the scripts
+Need update webmakaka/mern-stack-front-to-back-v2\*\*\* on your data in the scripts
 
     $ skaffold dev
 
