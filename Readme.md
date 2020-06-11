@@ -17,15 +17,6 @@ Minikube, Kubectl, Docker, Skaffold should be installed.
 
 <br/>
 
-### Skaffold installation
-
-    $ curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64
-
-    $ chmod +x skaffold
-    $ sudo mv skaffold /usr/local/bin
-
-<br/>
-
 ### Run app in minikube
 
 ```
@@ -68,6 +59,25 @@ minikube start --profile my-profile
 
 <br/>
 
+## Run App in "Production mode"
+
+    $ kubectl apply -f ./k8s
+
+<br/>
+
+## Run App in development mode with Skaffold
+
+<br/>
+
+### Skaffold installation
+
+    $ curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64
+
+    $ chmod +x skaffold
+    $ sudo mv skaffold /usr/local/bin
+
+<br/>
+
     $ cd skaffold
 
     $ docker login
@@ -77,6 +87,8 @@ Need update webmakaka/mern-stack-front-to-back-v2\*\*\* on your data in the scri
     $ skaffold dev
 
 <br/>
+
+### Result
 
     $ kubectl get pods
     NAME                                                            READY   STATUS    RESTARTS   AGE
