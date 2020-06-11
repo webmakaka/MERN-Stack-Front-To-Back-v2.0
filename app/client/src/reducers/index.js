@@ -8,5 +8,5 @@ export default combineReducers({
   alert,
   auth,
   profile,
-  post
+  post,
 });

@@ -34,10 +34,9 @@ const Routes = () => {
         <PrivateRoute exact path="/posts" component={Posts} />
         <PrivateRoute exact path="/posts/:id" component={Post} />
         <Route component={NotFound} />
-
       </Switch>
     </section>
-  )
-}
+  );
+};
 
 export default Routes;

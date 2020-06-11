@@ -7,13 +7,13 @@ const connectDB = async () => {
     await mongoose.connect(db, {
       useFindAndModify: false,
       useNewUrlParser: true,
-      useCreateIndex: true
+      useCreateIndex: true,
     });
-    console.log('MongoDB Connected...')
+    console.log('MongoDB Connected...');
   } catch (err) {
     console.log(err.message);
     process.exit(1);
   }
-}
+};
 
 module.exports = connectDB;
