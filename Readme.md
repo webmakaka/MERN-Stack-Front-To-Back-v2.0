@@ -62,6 +62,7 @@ minikube start --profile my-profile
 ## Run App in "Production mode"
 
     $ kubectl apply -f ./k8s
+    // $ kubectl delete -f ./k8s/
 
 <br/>
 
