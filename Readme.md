@@ -83,7 +83,7 @@ minikube start --profile my-profile
 
     $ docker login
 
-Need update webmakaka/mern-stack-front-to-back-v2\*\*\* on your data in the scripts
+Need update webmakaka/mern-stack-front-to-back-v2\*\*\* on your data in scripts
 
     $ skaffold dev
 
@@ -102,7 +102,7 @@ chrome browser --> https://mern-stack-front-to-back-v2.dev/
 
 <br/>
 
-type: **thisisunsafe** in window with security warning.
+type: **thisisunsafe** in the window with security warning.
 
 <br/>
 
