@@ -1,4 +1,4 @@
-# [Brad Traversy] MERN Stack Front To Back: Full Stack React, Redux &amp; Node.js [2019, ENG]
+# [Brad Traversy] MERN Stack Front To Back: Full Stack React, Redux &amp; Node.js [ENG, 2019]
 
 **Original src:**  
 https://github.com/bradtraversy/devconnector_2.0
@@ -142,5 +142,5 @@ type: **thisisunsafe** in the window with security warning.
 
 **Marley**
 
-Any questions on eng: https://jsdev.org/chat/  
+Any questions in eng: https://jsdev.org/chat/  
 Любые вопросы на русском: https://jsdev.ru/chat/
