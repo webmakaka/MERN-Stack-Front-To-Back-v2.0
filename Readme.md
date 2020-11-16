@@ -142,5 +142,5 @@ type: **thisisunsafe** in the window with security warning.
 
 **Marley**
 
-Any questions in eng: https://jsdev.org/chat/  
+Any questions in english: https://jsdev.org/chat/  
 Любые вопросы на русском: https://jsdev.ru/chat/
