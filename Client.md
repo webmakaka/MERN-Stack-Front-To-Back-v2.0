@@ -23,7 +23,7 @@
 
 <br/>
 
-![Application](../img/pic-06-32.png?raw=true)
+![Application](/img/pic-06-32.png?raw=true)
 
 
 <br/>
@@ -39,7 +39,7 @@
 
 <br/>
 
-![Application](../img/pic-06-34.png?raw=true)
+![Application](/img/pic-06-34.png?raw=true)
 
 
 <br/>
@@ -48,7 +48,7 @@
 
 <br/>
 
-![Application](../img/pic-06-35.png?raw=true)
+![Application](/img/pic-06-35.png?raw=true)
 
 <br/>
 
@@ -70,7 +70,7 @@
 
 <br/>
 
-![Application](../img/pic-07-39.png?raw=true)
+![Application](/img/pic-07-39.png?raw=true)
 
 <br/>
 
@@ -94,7 +94,7 @@
 
 <br/>
 
-![Application](../img/pic-08-43.png?raw=true)
+![Application](/img/pic-08-43.png?raw=true)
 
 <br/>
 
@@ -126,7 +126,7 @@
 
 <br/>
 
-![Application](../img/pic-09-49.png?raw=true)
+![Application](/img/pic-09-49.png?raw=true)
 
 <br/>
 
@@ -134,11 +134,11 @@
 
 <br/>
 
-![Application](../img/pic-09-50-1.png?raw=true)
+![Application](/img/pic-09-50-1.png?raw=true)
 
 <br/>
 
-![Application](../img/pic-09-50-2.png?raw=true)
+![Application](/img/pic-09-50-2.png?raw=true)
 
 <br/>
 
@@ -146,7 +146,7 @@
 
 <br/>
 
-![Application](../img/pic-09-51.png?raw=true)
+![Application](/img/pic-09-51.png?raw=true)
 
 <br/>
 
@@ -166,7 +166,7 @@
 
 <br/>
 
-![Application](../img/pic-10-54.png?raw=true)
+![Application](/img/pic-10-54.png?raw=true)
 
 
 <br/>
@@ -183,7 +183,7 @@
 
 <br/>
 
-![Application](../img/pic-10-57.png?raw=true)
+![Application](/img/pic-10-57.png?raw=true)
 
 
 <br/>
@@ -192,7 +192,7 @@
 
 <br/>
 
-![Application](../img/pic-10-58.png?raw=true)
+![Application](/img/pic-10-58.png?raw=true)
 
 
 <br/>
@@ -201,7 +201,7 @@
 
 <br/>
 
-![Application](../img/pic-10-59.png?raw=true)
+![Application](/img/pic-10-59.png?raw=true)
 
 <br/>
 
@@ -217,7 +217,7 @@
 
 <br/>
 
-![Application](../img/pic-11-61.png?raw=true)
+![Application](/img/pic-11-61.png?raw=true)
 
 <br/>
 
@@ -225,7 +225,7 @@
 
 <br/>
 
-![Application](../img/pic-11-62.png?raw=true)
+![Application](/img/pic-11-62.png?raw=true)
 
 <br/>
 
@@ -237,7 +237,7 @@
 
 <br/>
 
-![Application](../img/pic-11-64.png?raw=true)
+![Application](/img/pic-11-64.png?raw=true)
 
 <br/>
 
@@ -245,7 +245,7 @@
 
 <br/>
 
-![Application](../img/pic-11-65.png?raw=true)
+![Application](/img/pic-11-65.png?raw=true)
 
 <br/>
 
@@ -253,7 +253,7 @@
 
 <br/>
 
-![Application](../img/pic-11-66.png?raw=true)
+![Application](/img/pic-11-66.png?raw=true)
 
 <br/>
 
@@ -261,7 +261,7 @@
 
 <br/>
 
-![Application](../img/pic-11-67.png?raw=true)
+![Application](/img/pic-11-67.png?raw=true)
 
 **I have found a mistake with removing comments. Not right comment is removing!**
 
