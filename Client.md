@@ -25,7 +25,6 @@
 
 ![Application](/img/pic-06-32.png?raw=true)
 
-
 <br/>
 
 ### 033 React Router Setup
@@ -40,7 +39,6 @@
 <br/>
 
 ![Application](/img/pic-06-34.png?raw=true)
-
 
 <br/>
 
@@ -168,7 +166,6 @@
 
 ![Application](/img/pic-10-54.png?raw=true)
 
-
 <br/>
 
 ### 055 Addressing The Console Warnings
@@ -185,7 +182,6 @@
 
 ![Application](/img/pic-10-57.png?raw=true)
 
-
 <br/>
 
 ### 058 Profile Experience Education Display
@@ -193,7 +189,6 @@
 <br/>
 
 ![Application](/img/pic-10-58.png?raw=true)
-
 
 <br/>
 
@@ -273,6 +268,7 @@
 
 ### 072 Not Found Page Theme Workaround
 
+<br/><br/>
 
 ---
 
@@ -280,5 +276,5 @@
 
 **Marley**
 
-Any questions on eng: https://jsdev.org/chat/  
-Любые вопросы на русском: https://jsdev.ru/chat/
+Any questions in english: <a href="https://jsdev.org/chat/">Telegram Chat</a>  
+Любые вопросы на русском: <a href="https://jsdev.ru/chat/">Телеграм чат</a>

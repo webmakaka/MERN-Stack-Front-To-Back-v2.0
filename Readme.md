@@ -21,14 +21,14 @@ Minikube, Kubectl, Docker, Skaffold should be installed.
 
 ```
 $ {
-minikube --profile my-profile config set memory 8192
-minikube --profile my-profile config set cpus 4
+    minikube --profile my-profile config set memory 8192
+    minikube --profile my-profile config set cpus 4
 
-// minikube --profile my-profile config set vm-driver virtualbox
-minikube --profile my-profile config set vm-driver docker
+    // minikube --profile my-profile config set vm-driver virtualbox
+    minikube --profile my-profile config set vm-driver docker
 
-minikube --profile my-profile config set kubernetes-version v1.18.2
-minikube start --profile my-profile
+    minikube --profile my-profile config set kubernetes-version v1.18.2
+    minikube start --profile my-profile
 }
 ```
 
@@ -134,7 +134,7 @@ type: **thisisunsafe** in the window with security warning.
 
 ## [Development step by step](./Development.md)
 
-<br/>
+<br/><br/>
 
 ---
 
@@ -142,5 +142,5 @@ type: **thisisunsafe** in the window with security warning.
 
 **Marley**
 
-Any questions in english: https://jsdev.org/chat/  
-Любые вопросы на русском: https://jsdev.ru/chat/
+Any questions in english: <a href="https://jsdev.org/chat/">Telegram Chat</a>  
+Любые вопросы на русском: <a href="https://jsdev.ru/chat/">Телеграм чат</a>

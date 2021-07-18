@@ -1,0 +1,64 @@
+version: '3'
+services:
+  client:
+    build:
+      context: ./app/client/
+      dockerfile: client-dev.dockerfile
+    restart: always
+    container_name: mern-stack-front-to-back-client
+    hostname: mern-stack-front-to-back-client
+    ports:
+      - ${CLIENT_PORT}:${CLIENT_PORT}
+    links:
+      - api
+    depends_on:
+      - api
+    volumes:
+      - /app/node_modules
+      - ./app/client:/app
+      - ./.env:/app/.env
+    image: webmakaka/mern-stack-front-to-back-client
+    networks:
+      - mern-stack-front-to-back-network
+
+  api:
+    build:
+      context: ./app/api/
+      dockerfile: api.dockerfile
+    restart: always
+    container_name: mern-stack-front-to-back-api
+    hostname: mern-stack-front-to-back-api
+    ports:
+      - ${API_PORT}:${API_PORT}
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
+    volumes:
+      - /app/node_modules
+      - ./app/api:/app
+      - ./.env:/app/.env
+    environment:
+      - API_PORT=${API_PORT}
+    image: webmakaka/mern-stack-front-to-back-api
+    networks:
+      - mern-stack-front-to-back-network
+
+  mongodb:
+    #    image: mongo:4.4.6
+    build:
+      context: ./app/db/
+      dockerfile: db.dockerfile
+    restart: always
+    container_name: mern-stack-front-to-back-mongo
+    hostname: mern-stack-front-to-back-mongo
+    ports:
+      - ${MONGO_PORT}:27017
+    image: webmakaka/mern-stack-front-to-back-mongo
+    networks:
+      - mern-stack-front-to-back-network
+
+networks:
+  mern-stack-front-to-back-network:
+    driver: bridge
+    name: mern-stack-front-to-back-network

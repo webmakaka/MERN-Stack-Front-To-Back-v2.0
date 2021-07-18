@@ -1,13 +1,13 @@
-FROM node:12.16.3-alpine3.9 as builder
+FROM node:16-alpine3.14 as builder
 
-WORKDIR '/project'
+WORKDIR '/app'
 
 COPY ./package*.json ./
-RUN npm install
+RUN yarn install
 
-COPY . ./
+COPY ./ ./
 
-RUN npm run build
+RUN yarn build
 
 FROM nginx
 
@@ -15,4 +15,4 @@ RUN apt update && apt upgrade && \
   apt install -y bash vim less curl iputils-ping dnsutils
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /project/build /usr/share/nginx/html
+COPY --from=builder /app/build /usr/share/nginx/html

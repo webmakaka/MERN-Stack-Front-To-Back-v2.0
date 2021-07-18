@@ -25,7 +25,7 @@
 <br/>
 
 ## 03 User API Routes JWT Authentication
- 
+
 <br/>
 
 ### 010 Request Body Validation
@@ -44,6 +44,7 @@
 
 <br/>
 
+    // CREATE USER
     $ curl -d '{"name":"marley", "email":"marley@pochta.ru", "password": "password1"}' \
     -H "Content-Type: application/json" \
     -X POST localhost:5000/api/users \
@@ -58,8 +59,8 @@
 delete from mongodb.com users collection, then create new
 
     $ curl -d '{
-        "name":"marley", 
-        "email":"marley@pochta.ru", 
+        "name":"marley",
+        "email":"marley@pochta.ru",
         "password": "password1"
     }' \
     -H "Content-Type: application/json" \
@@ -76,14 +77,13 @@ delete from mongodb.com users collection, then create new
 
 ### 014 User Authentication Login Route
 
-    $ curl -d '{ 
-        "email":"marley@pochta.ru", 
+    $ curl -d '{
+        "email":"marley@pochta.ru",
         "password": "password1"
     }' \
     -H "Content-Type: application/json" \
     -X POST localhost:5000/api/auth \
     | python -m json.tool
-
 
 <br/>
 
@@ -103,7 +103,7 @@ delete from mongodb.com users collection, then create new
 
 ### 017 Create Update Profile Routes
 
-    $ curl -d '{ 
+    $ curl -d '{
         "company":"Marley",
         "status": "Developer",
         "website": "https://marley.org",
@@ -119,7 +119,6 @@ delete from mongodb.com users collection, then create new
     -H "X-Auth-Token: <Token ID>" \
     -X POST localhost:5000/api/profile \
     | python -m json.tool
-
 
 <br/>
 
@@ -137,7 +136,6 @@ delete from mongodb.com users collection, then create new
     -X GET localhost:5000/api/profile/user/<User ID> \
     | python -m json.tool
 
-
 <br/>
 
 ### 019 Delete Profile User
@@ -151,7 +149,7 @@ delete from mongodb.com users collection, then create new
 
 ### 020 Add Profile Experience
 
-    $ curl -d '{ 
+    $ curl -d '{
         "title":"Instructor & Senior Developer",
         "company": "Traversy Media",
         "location": "Moscow",
@@ -164,12 +162,11 @@ delete from mongodb.com users collection, then create new
     -X PUT localhost:5000/api/profile/experience \
     | python -m json.tool
 
-
 <br/>
 
 ### 021 Delete Profile Experience
 
-    $ curl -d '{ 
+    $ curl -d '{
         "title":"Web Developer ",
         "company": "Tech Guy Web Solutions",
         "location": "Sankt Petersburg",
@@ -182,7 +179,6 @@ delete from mongodb.com users collection, then create new
     -X PUT localhost:5000/api/profile/experience \
     | python -m json.tool
 
-
 <br/>
 
     $ curl \
@@ -190,12 +186,11 @@ delete from mongodb.com users collection, then create new
     -X DELETE localhost:5000/api/profile/experience/<Profile ID> \
     | python -m json.tool
 
-
 <br/>
 
 ### 022 Add Delete Profile Education
 
-    $ curl -d '{ 
+    $ curl -d '{
         "school":"Nothern Esses College",
         "degree": "Associates Degree",
         "fieldofstudy": "Computer Science",
@@ -210,7 +205,7 @@ delete from mongodb.com users collection, then create new
 
 <br/>
 
-    $ curl -d '{ 
+    $ curl -d '{
         "school":"Test School",
         "degree": "Associates Degree",
         "fieldofstudy": "Computer Science",
@@ -222,7 +217,6 @@ delete from mongodb.com users collection, then create new
     -H "X-Auth-Token: <Token ID>" \
     -X PUT localhost:5000/api/profile/education \
     | python -m json.tool
-
 
 <br/>
 
@@ -241,7 +235,6 @@ delete from mongodb.com users collection, then create new
     -X GET localhost:5000/api/profile/github/marley-nodejs \
     | python -m json.tool
 
-
 <br/>
 
 ## 05 Post API Routes
@@ -254,8 +247,8 @@ delete from mongodb.com users collection, then create new
 
 ### 025 Add Post Route
 
-    $ curl -d '{ 
-        "email":"marley@pochta.ru", 
+    $ curl -d '{
+        "email":"marley@pochta.ru",
         "password": "password1"
     }' \
     -H "Content-Type: application/json" \
@@ -264,14 +257,13 @@ delete from mongodb.com users collection, then create new
 
 <br/>
 
-    $ curl -d '{ 
+    $ curl -d '{
         "text":"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
     }' \
     -H "Content-Type: application/json" \
     -H "X-Auth-Token: <Token ID>" \
     -X POST localhost:5000/api/posts \
     | python -m json.tool
-
 
 <br/>
 
@@ -295,7 +287,6 @@ delete from mongodb.com users collection, then create new
     -H "X-Auth-Token: <Token ID>" \
     -X DELETE localhost:5000/api/posts/<Post Id> \
     | python -m json.tool
-
 
 <br/>
 
@@ -323,20 +314,18 @@ delete from mongodb.com users collection, then create new
     -X PUT localhost:5000/api/posts/unlike/<Post Id> \
     | python -m json.tool
 
-
 <br/>
 
 ### 028 Add Remove Comment Routes
 
     $ curl \
-    -d '{ 
+    -d '{
         "text":"Another stupid comment from another stupid guy!"
     }' \
     -H "Content-Type: application/json" \
     -H "X-Auth-Token: <Token ID>" \
     -X POST localhost:5000/api/posts/comment/<Post Id> \
     | python -m json.tool
-
 
 <br/>
 
@@ -353,11 +342,13 @@ delete from mongodb.com users collection, then create new
     -X DELETE localhost:5000/api/posts/comment/<Post Id>/<Comment Id> \
     | python -m json.tool
 
+<br/><br/>
+
 ---
 
 <br/>
 
 **Marley**
 
-Any questions on eng: https://jsdev.org/chat/  
-Любые вопросы на русском: https://jsdev.ru/chat/
+Any questions in english: <a href="https://jsdev.org/chat/">Telegram Chat</a>  
+Любые вопросы на русском: <a href="https://jsdev.ru/chat/">Телеграм чат</a>

@@ -1,4 +1,4 @@
 {
-  "mongoURI": "mongodb://user1:password11@ds337418.mlab.com:37418/mern-stack-front-to-back-2",
+  "mongoURI": "mongodb://mongodb:27017/mongo-database",
   "jwtSecret": "MySecretToken"
 }
