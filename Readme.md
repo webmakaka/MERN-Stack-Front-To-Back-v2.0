@@ -132,7 +132,7 @@ type: **thisisunsafe** in the window with security warning.
 
 <br/>
 
-## [Development step by step](./Development.md)
+## [Development step by step](./docs/Development.md)
 
 <br/><br/>
 
