@@ -5,13 +5,21 @@ https://github.com/bradtraversy/devconnector_2.0
 
 <br/>
 
-<hr/>
 
 <br/>
 
-## How to run the final app
+## How to run the final app with docker-compose
 
-I am working in ubuntu linux 18.04.
+```
+$ docker-compose up --build
+```
+
+localhost:3000
+
+<br/>
+
+## How to run the final app with minikube
+
 
 Minikube, Kubectl, Docker, Skaffold should be installed.
 
