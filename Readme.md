@@ -5,6 +5,19 @@ https://github.com/bradtraversy/devconnector_2.0
 
 <br/>
 
+**Project UI:**
+
+<br/>
+
+![Application](/img/pic-final-01.png?raw=true)
+
+<br/>
+
+![Application](/img/pic-final-02.png?raw=true)
+
+<br/>
+
+![Application](/img/pic-final-03.png?raw=true)
 
 <br/>
 
@@ -13,12 +26,11 @@ https://github.com/bradtraversy/devconnector_2.0
 ```
 $ docker-compose up --build
 ```
-
 localhost:3000
 
 <br/>
 
-## How to run the final app with minikube
+## How to run the final app with minikube (Possible not works after latest updates, but who care?)
 
 
 Minikube, Kubectl, Docker, Skaffold should be installed.
@@ -111,22 +123,6 @@ chrome browser --> https://mern-stack-front-to-back-v2.dev/
 <br/>
 
 type: **thisisunsafe** in the window with security warning.
-
-<br/>
-
-**Expected result:**
-
-<br/>
-
-![Application](/img/pic-final-01.png?raw=true)
-
-<br/>
-
-![Application](/img/pic-final-02.png?raw=true)
-
-<br/>
-
-![Application](/img/pic-final-03.png?raw=true)
 
 <br/>
 
